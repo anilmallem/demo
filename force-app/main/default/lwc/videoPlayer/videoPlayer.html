@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Dark Phoenix Trailer">
+          <iframe width="300" height="150" src= 'https://youtu.be/vYPYgHwf2KA' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <video
+            controls
+            preload="auto"
+            width=300
+            height=150
+            src= {video}
+            muted={muted}
+            type = 'video/mp4'
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          >
+            <p>
+              {errorMessage}
+            </p>
+          </video>
+   </lightning-card>
+  </template>

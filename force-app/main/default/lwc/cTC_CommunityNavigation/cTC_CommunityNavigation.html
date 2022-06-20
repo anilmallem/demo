@@ -1,0 +1,16 @@
+<template>
+    <div>
+        <template for:each={menuItems} for:item="item" for:index="i">
+            <div key={item.i}>
+                <template if:true={item.imageUrl}>
+                    <img
+                        data-label={item.label}
+                        src={item.imageUrl}
+                       
+                        onclick={navigateToItem}
+                    />
+                </template>
+            </div>
+        </template>
+      </div>
+</template>

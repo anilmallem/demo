@@ -1,0 +1,60 @@
+<template>
+    <lightning-card title="Task">
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="6" padding="around-small">
+            <div class="ovf">
+                <lightning-input type="text" label="First Name" firstname="firstname" onchange={firstnameChangedHandler}
+                    value={strFirstName} pattern="[A-Za-z]*" message-when-pattern-mismatch="Please enter a valid Name"
+                    required></lightning-input>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="around-small">
+            <div class="ovf">
+                <lightning-input type="text" label="Last Name" lastname="lastname" onchange={lastnameChangedHandler}
+                    value={strLastName} pattern="[A-Za-z]*" message-when-pattern-mismatch="Please enter a valid Name"
+                    required></lightning-input>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="around-small">
+            <div class="ovf">
+                <lightning-input type="text" label="Email" name="email" onchange={emailChangedHandler} value={strEmail}
+                    pattern="[A-Za-z0-9._-]+@[a-z0-9-]+\.[a-z]{2,}$"
+                    message-when-pattern-mismatch="Please enter a valid email" required>
+                </lightning-input>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small">
+
+            <div class="ovf">
+
+                <lightning-combobox label="Code" value={strCountryCode} placeholder="Select Country-Code"
+                    options={options} name="countryCode" onchange={countryCodeChangedHandler} required>
+                </lightning-combobox>
+            </div>
+
+        </lightning-layout-item>
+
+        <lightning-layout-item size="4" padding="around-small">
+            <div class="ovf">
+
+                <lightning-input type="text" label="Phone" name="phone" onchange={phoneChangedHandler} value={strPhone}
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+                    message-when-pattern-mismatch="Please enter a valid phone number" required></lightning-input>
+            </div>
+
+
+        </lightning-layout-item >
+        <lightning-layout-item >
+
+
+        <div class="slds-form-element buttons slds-text-align_center">
+            <div class="ovf">
+            <lightning-button variant="brand" type="submit" label="Save" 
+                onclick={save}>
+            </lightning-button>
+        </div>
+        </div>
+    </lightning-layout-item>
+    </lightning-layout>
+</lightning-card>
+</template>

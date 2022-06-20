@@ -1,0 +1,32 @@
+<template>
+    <div class="slds-grid" >
+        <!-- <a onclick={drop} class="userInfo"> -->
+            <div onclick={drop} class="userInfo">
+                <lightning-icon data-id="trigger" icon-name="utility:user" alternative-text="User" title="User"
+                    size="small">
+                </lightning-icon>
+            </div>
+            <div class="showMobile userInfo" onclick={drop}>
+                <lightning-icon icon-name="utility:chevrondown" title="User" size="x-small"></lightning-icon>
+            </div>
+            <div class="showUserName styleName userInfo" onclick={drop}>Sneha B</div>
+        <!-- </a> -->
+         <div class="customDropdown">
+            <template if:true={Open}>
+                <ul class="actionMenu dropdown" data-id="actionMenu">
+                    <template for:each={options} for:item="itemLabel">
+                        <li key={itemLabel.id} title={itemLabel} onclick={handleClick}>
+                            <a data-target-id = {itemLabel} >{itemLabel}</a>
+                        </li>
+                    </template>
+                    <li class="feedbackopt">
+                        <a target="_blank" href= {label.feedbackUrl} onclick={handleClick}>
+                            <span data-target-id = 'Feedback'>Feedback</span>
+                            <img class="icn" src={} />
+                        </a>
+                    </li>
+                </ul>
+            </template>
+        </div> 
+    </div>
+</template>

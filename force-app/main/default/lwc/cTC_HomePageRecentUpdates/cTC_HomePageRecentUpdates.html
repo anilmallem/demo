@@ -1,0 +1,39 @@
+<template>
+    <div class="slds-size_1-of-3">
+
+        <div class="divWidth">
+            <template if:true={isLoaded}>
+                <div class="backgroundInverse">
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+                </div>
+            </template>
+            <template if:false={isLoaded}>
+                <h1 class="setRecentUpdate">Recent Updates</h1>
+            <template for:each={feedItems} for:item="feedItem">
+                <div style="max-height: 460px; overflow-y: auto;" key={feedItem.Id}>
+
+                    <c-home-page-recent-updates-card-details item={feedItem}>
+
+                    </c-home-page-recent-updates-card-details>
+                </div>
+
+            </template>
+
+
+            <div style="text-align:center;">
+                <!-- <template if:true={temptrue}> 
+                    <a href="" onclick={onclick} class="viewAllUpdates">View less updates</a>
+                </template> -->
+                <!-- <template if:false={tempfalse}>  -->
+                <div class="viewPad">
+                    <a href="" onclick={onclick} class="viewAllUpdates">View all</a>
+                </div>
+                <!-- </template> -->
+            </div>
+
+            </template>
+            
+        </div>
+
+    </div>
+</template>

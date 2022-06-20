@@ -1,0 +1,58 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+  
+   <div>
+        <!--dashboardPage-->
+        <div style="background-color: #F4F4F5; width:100%;display:flex;">
+            <!--navigation menu col 1-->
+            
+            <div class="left-box">
+                <c:CTC_Navigation></c:CTC_Navigation>
+            </div> 
+            
+            <!--Welcome col2-->
+            <!-- <div class="right-box" >
+                Welcome Row
+                <div class="slds-grid slds-wrap slds-gutters">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12"> 
+                         <c:BrokerWelcomePage></c:BrokerWelcomePage>
+                    </div>
+                   
+                </div>
+                
+                Grid for mostrecent deal
+                <div class="slds-grid slds-wrap slds-gutters" >
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_8-of-12 widthLap">
+                        <div class="padMostRecent">
+                            <c:BrokerMostRecentDeals></c:BrokerMostRecentDeals> 
+                        </div>
+                        <div class="showTabPro hidePro">
+                            <c:CTC_Cafe_Alerts></c:CTC_Cafe_Alerts>
+                        </div>
+                        <div class="showTabPro hidePro">
+                            <c:BrokerDealsFieldTracking></c:BrokerDealsFieldTracking>
+                        </div>
+                        <c:BrokerDashboardReports></c:BrokerDashboardReports>
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_4-of-12 hideDeals widthLap">
+                        <div class="tabPadding hideforTabPro">
+                        <c:CTC_Cafe_Alerts></c:CTC_Cafe_Alerts>
+                        </div>                       
+                        <div class="imgForDesktop hideImag ">
+                            <c:BrokerDashBoardOffer></c:BrokerDashBoardOffer>
+                        </div>
+                        <div class="tabPadding hideforTabPro">
+                             <c:BrokerDealsFieldTracking></c:BrokerDealsFieldTracking>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="">
+	          <c:BrokerLoggedInFooterComp></c:BrokerLoggedInFooterComp>
+                   </div>
+            
+            </div> -->
+        </div>
+   </div>
+</aura:component>	

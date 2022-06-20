@@ -1,0 +1,18 @@
+<template>
+    <p>This is Country Code</p>
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="Enter Name"></lightning-input>
+        <lightning-combobox name="progress" label="Country Code" value={value} placeholder="Select Country"
+            options={options} onchange={handleChange}>
+        </lightning-combobox>
+        <lightning-input type="text" label="Enter Phone"></lightning-input>
+
+        <p>Selected value is: {value}</p>
+    </div>
+    <lightning-button variant="brand" label="Save" title="Primary action" onclick={handleClick}
+        class="slds-m-left_x-small"></lightning-button>
+    <div>
+        <input type="text" name="firstname" />
+        <input type="text" name="lastname" />
+    </div>
+</template>

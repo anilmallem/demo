@@ -1,0 +1,66 @@
+<template>
+    <!-- <ui:menu >
+        <ui:menuTriggerLink aura:id="trigger"> -->
+            
+    <div class="slds-grid">
+        <div>
+            <lightning-icon onclick={dropdown} icon-name="utility:user" alternative-text="User" title="User"
+                size="small"></lightning-icon>
+        </div>
+        <!-- <aura:if isTrue="{!v.checkDevice}">-->
+        <div class="showMobile">
+            <lightning-icon icon-name="utility:chevrondown" title="User" size="x-small"></lightning-icon>
+        </div>
+        <!--  <aura:set attribute="else">-->
+
+        <!-- <div class="showUserName styleName"> -->
+        <!-- <template if:true={dropdown.data}></template> -->
+
+        <!-- <lightning-button onclick={dropdown} label="Sneha B"> Sneha B</lightning-button> -->
+        <div >
+            <div onclick={dropdown} class="showUserName styleName">
+                Sneha B
+            </div>
+            <ul class="remove actionMenu uiMenuList" data-id="mydiv">
+               
+                <li >Home</li>
+                <li >My Profile</li>
+                <li >My Settings</li>
+                <li >Logout</li>
+                <li >Feedback</li>   
+            </ul>
+
+        </div>
+        <!-- </div>
+     -->
+        <!-- </aura:set>-->
+        <!-- </aura:if>-->
+    </div>
+
+</template>
+<!-- </ui:menuTriggerPress> -->
+<!-- <ui:menuList class="actionMenu" aura:id="actionMenu">
+            <aura:iteration items="{!v.options}" var="itemLabel">
+                <ui:actionMenuItem label="{!itemLabel}" click="{!c.handleClick}"/>
+            </aura:iteration>
+            <li class="feedbackopt">
+            	<a href="{!$Label.c.Broker_Feedback_URL}" target="_blank">
+	                 <span>Feedback</span>
+                    <img class="icn"  src="{!$Resource.Broker_Feedback_Icon}"/>
+                    <img class="icn"  src="{!$Resource.Broker_Feedback_Icon + '/new_window.svg'}"/>
+                </a>
+            </li>
+            <!<a href="https://docs.google.com/spreadsheets/d/119jwa_ArA1nwLALeK3j_ydrEPfx2hvWlSo2gSko7pNY/edit#gid=0" target="_blank">
+                <div class="slds-grid slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_8-of-12  feedbackopt">
+                        <span>Feedback
+                        </span>
+                        
+                    </div>
+                    <div class="slds-col slds-size_4-of-12 ">
+                        <img class="icn"  src="{!$Resource.mortgageicon}"/>  
+                    </div>
+                </div>
+            </a>
+        </ui:menuList>
+    </ui:menu>  -->

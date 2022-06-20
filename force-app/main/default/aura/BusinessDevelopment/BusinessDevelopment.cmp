@@ -1,0 +1,34 @@
+<aura:component
+  controller="BusinessDevelopmentClass01"
+  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+  access="global">
+  <aura:attribute name="records" type="String[]" />
+  <aura:attribute name="res" type="String" />
+  <aura:attribute name="text" type="String" default="Manager" />
+  <aura:attribute name="text1" type="String" default="BDM"/>
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+   
+    
+  <div style="position: relative;width:100%;">
+      <div style="padding:20px;height:450px;width:450px;border-style:solid;border-radius: 5px;position:absolute;right:0px;margin: 90px 50px 0px 0px;background-color:white">
+     <center><H1 style="color:black;font-family: Arial, Helvetica, sans-serif;font-size: 20px;">{!v.records[0].Heading__c}</H1></center>
+      <center>   <img src="{!v.res}"  style="border-radius: 50%;border-color:blue;"/></center> 
+    <center><p style="font-size: 15px;font-weight: bold;">{!v.records[0].Name__c}</p> <p>{!v.records[0].Role__c}</p> </center>
+          <br></br>
+          <br></br>
+         <center> <p>{!v.records[0].Phone__c}</p>
+          <p style=" text-decoration: underline;color:orange;">{!v.records[0].Email__c}</p></center>
+
+    <!-- Image -->
+    <br></br>
+    <p>Your Business Development {!v.text} is your dedicated barista to help you
+      navigate your partnership with Community Trust.</p>
+          <br></br>
+    <p>Contact your {!v.text1}  today to discover how we can serve up great solutions
+      for you and your clients.</p>
+          </div>
+  </div>
+  
+       
+
+</aura:component>

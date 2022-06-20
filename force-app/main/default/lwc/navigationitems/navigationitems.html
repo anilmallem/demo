@@ -1,0 +1,52 @@
+<template>
+    <lightning-card>
+        <lightning-layout>  
+            <div class="navstyle">       
+            <lightning-layout-item>
+                <lightning-vertical-navigation selected-item='home' onselect={changeHandleAction} class="navigation">
+                   <div>
+                       <lightning-vertical-navigation-section label="Navigation" >
+                        <lightning-vertical-navigation-item-icon label="Home" name="home" icon-name="utility:ad_set"></lightning-vertical-navigation-item-icon>
+                        <lightning-vertical-navigation-item-icon label="Deals" name="deals" icon-name="utility:discounts" ></lightning-vertical-navigation-item-icon>
+                        <lightning-vertical-navigation-item label="Resource Center" name="resourcecenter"></lightning-vertical-navigation-item>
+                        <lightning-vertical-navigation-item label="InstaShare" name="instashare" ></lightning-vertical-navigation-item>
+                        <lightning-vertical-navigation-item label="Rates and Compensation" name="ratesandcomp" ></lightning-vertical-navigation-item>
+                        <lightning-vertical-navigation-item label="Guidlines and Documentation" name="guidanddoc" ></lightning-vertical-navigation-item>
+                    </lightning-vertical-navigation-section>
+                </div> 
+                </lightning-vertical-navigation>
+            </lightning-layout-item>
+        </div>  
+            <lightning-layout-item padding="around-medium">
+                <!-- <h2 class="slds-section-title--divider" style="background:#eee; margin-bottom:10px;"><strong>You Are Viewing: <span style="color:#0000ff;">{currentContent}</span></strong></h2> -->
+     
+                <template if:true={homeValue}>                      
+                    <c-homechild></c-homechild>
+                </template>
+     
+                <template if:true={dealsValue}>
+                    <c-dealschild></c-dealschild>
+                </template>
+     
+                <template if:true={resourcecenterValue}>
+                    <c-resourcecenternavigation></c-resourcecenternavigation>
+                </template>
+     
+                <template if:true={instashareValue}>
+                    <c-instashare></c-instashare>
+                </template>
+     
+                <template if:true={ratesandcompValue}>
+                    <c-ratesandcomp></c-ratesandcomp>
+                </template>
+     
+                <template if:true={guidanddocValue}>
+                    <c-guidanddoc></c-guidanddoc>
+                    
+                   
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+   
+    </lightning-card> 
+    </template>

@@ -1,0 +1,4 @@
+<aura:component access="global"
+implements="forceCommunity:availableForAllPageTypes">
+<c:CTC_Navigation/>
+</aura:component>	

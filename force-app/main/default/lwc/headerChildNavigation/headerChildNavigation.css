@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'Calibri';
+    src: url('/BrokersPortal/resource/fonts/calibri/Calibri.svg#Calibri') format('svg'),
+         url('/BrokersPortal/resource/fonts/calibri/Calibri.ttf') format('truetype'),
+         url('/BrokersPortal/resource/fonts/calibri/Calibri.woff') format('woff');
+    src: url('/BrokersPortal/resource/fonts/calibri/calibri.eot');
+    src: url('/BrokersPortal/resource/fonts/calibri/calibri.eot?#iefix') format('embedded-opentype'),
+         url('/BrokersPortal/resource/fonts/calibri/calibri.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .showDeskTop
+  {
+      display:block;
+  }
+   div:focus{
+      outline: 0 none !important;
+      outline-offset: 0 !important;
+      box-shadow: none !important;
+      background:none !important;
+  }
+   a:focus{
+      outline: 0 none !important;
+      outline-offset: 0 !important;
+      box-shadow: none !important;
+      background:none !important;
+  }
+  li:focus {
+      outline: 0 none !important;
+      outline-offset: 0 !important;
+      box-shadow: none !important;
+      background:none !important;
+  }
+   .navMargin{
+      position: fixed; margin: 24px 0px 0px 0px;width:23%; float:left;background: #f4f4f5;
+  }
+  /*.THIS .navContainer .setResour > .slds-grid {
+      line-height:40px;
+  }*/
+   .navContainer .setResour > ul.showDropDown {
+      margin-top:8px;
+  }
+  /* Used to override the home tab name starts here*/
+   .themeNav li:first-child a.comm-navigation__home-link {
+      visibility: hidden;
+  }
+ .themeNav li:first-child a.comm-navigation__home-link:after{
+      content:'Dashboard'; 
+      visibility: visible;
+  }
+  .THIS .themeNav li:first-child a.comm-navigation__top-level-item-link--active{
+      visibility: hidden;
+  }
+   .themeNav li:first-child a.comm-navigation__top-level-item-link--active:after{
+      content:'Dashboard'; 
+      visibility: visible;
+  }
+   .setSize {
+      position:relative;
+  }
+   .sub-menu {
+      position:absolute;
+      right:20px;
+  }
+  /* Used to override the home tab name ends here*/
+  
+   .navContainer li a{
+      background: none !important;
+  }
+  
+  
+  
+   .setSubMenu{
+      background: none !important;
+  }
+   .slds-col .ui-widget {
+      margin: 16px 0;
+  }
+   .slds-col.content {
+      width: 1140px;
+  }
+   .navContainer{
+      float: left;
+      background: #4E4E4E!important;  
+      color: #fff!important;  
+      min-height:960px;
+  }
+  .showDropDown{
+      background-color: #4e4D4e!important;
+      color: #fff!important;     
+      margin-left: 8px;
+  }
+  .slds-is-active{
+      color: #FFFFFF !important;  
+      background: #373737 0% 0% no-repeat padding-box;
+  }
+   .lds-text-link--reset{
+      background:#373737 !important; 
+  }
+  
+   a:hover,.THIS a:active{
+      color: #FFFFFF !important;
+  }
+   .slds-navigation-list--vertical__action{
+      font-size:16px;
+      font-family: 'Calibri' !important;
+      color: #E2E2E2 !important;
+  }
+   .setSizesubItem{
+      font-size:16px;
+      font-family: 'Calibri' !important;   
+      color: #E2E2E2 !important;
+  }
+   .setSizesubItem a{
+      background:none !important;
+  }
+   .slds-text-link--reset{
+      border-top: #000000 !important;
+      border-bottom: #000000 !important;
+      border-inline-start: #000000 !important;
+  }
+   .slds-is-active a{
+      background:none !important;
+  }
+   .setNavg{
+      text-align: left;
+      font-family: 'Calibri';
+      letter-spacing: 0.7px;
+      color: #E2E2E2;
+  }
+  
+  
+  /*Mobile View*/
+  @media only screen and (min-device-width : 320px) and (max-device-width :767px) {
+      
+      .setNavg{
+          text-align: left;
+          font: Bold 11/21px;
+          font-family: 'Calibri';
+          
+          letter-spacing: 0.7px;
+          color: #E2E2E2;
+      }   
+       .slds-navigation-list--vertical__action{
+          font: Bold 16/22px Calibri;
+          font-family: 'Calibri' !important;
+          color: #E2E2E2 !important;
+      }
+      .setSizesubItem{
+          font: Bold 16/22px Calibri;
+          font-family: 'Calibri' !important;   
+          color: #E2E2E2 !important;
+      }
+      .slds-text-link--reset{
+          border-top: #000000 !important;
+          border-bottom: #000000 !important;
+          border-inline-start: #000000 !important;
+      }  
+      .showDeskTop
+      {
+          display:none;
+      }
+      
+  }
+  @media only screen and (min-device-width :768px) and (max-device-width :1024px) 
+      {
+      .showDeskTop
+      {
+          display:none;
+      }
+  }
+  @media only screen and (max-device-width : 1400px) {
+       .navMargin{
+          width:18%; float:left;
+      }
+  }
