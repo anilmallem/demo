@@ -12,9 +12,20 @@
             <template for:each={feedItems} for:item="feedItem">
                 <div style="max-height: 460px; overflow-y: auto;" key={feedItem.Id}>
 
-                    <c-home-page-recent-updates-card-details item={feedItem}>
+                    <!-- <c-home-page-recent-updates-card-details item={feedItem}>
 
-                    </c-home-page-recent-updates-card-details>
+                    </c-home-page-recent-updates-card-details> -->
+                    <h1 class="date">{feedItem.CreatedDate}</h1>
+                    <template if:true={parentid}>
+                        <b class="Values">{feedItem.Title}</b>&nbsp;
+                    </template>
+                    <template if:false={parentid}>
+                        <a href="javascript:void(0);" onclick={navigateToRecord} name={}>
+                        <b class="text">{feedItem.Title} - Loan Status Change</b></a><br /><br />
+                        <b class="Values ">Loan Status value on {feedItem.Title} {feedItem.Body} </b>
+                        <br />
+                        <br />
+                    </template>
                 </div>
 
             </template>

@@ -1,0 +1,10 @@
+<template>
+    <template for:each={meetingRooms} for:item="eachone">
+        <div key={eachone.Id}>
+            <lightning-input step=".01" class={eachone.name} label={eachone.name} name={eachone.name} onchange={handleInputChange} data-id={eachone.name} type="number" value={eachone.value} >
+
+            </lightning-input>
+        </div>
+    </template>
+    <lightning-button label="Submit" onclick={handleEvent}></lightning-button>
+</template>
